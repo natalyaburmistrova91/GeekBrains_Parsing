@@ -17,6 +17,14 @@ pprint(list_of_repos)
 with open("data_file.json", "w", encoding="utf-8") as file1:
     json.dump(data, file1)
 
+# Вывод:
+# ['natalyaburmistrova91/codes_for_work',
+#  'natalyaburmistrova91/GeekBrains_BigData_Python',
+#  'natalyaburmistrova91/GeekBrains_DataBase',
+#  'natalyaburmistrova91/GeekBrains_DataBase_CourseProject',
+#  'natalyaburmistrova91/GeekBrains_Python_Algoritms',
+#  'natalyaburmistrova91/linux_gb']
+
 # 2. Изучить список открытых API. Найти среди них любое, требующее авторизацию (любого типа).
 # Выполнить запросы к нему, пройдя авторизацию. Ответ сервера записать в файл.
 
@@ -43,3 +51,58 @@ for i in range(len(top_artists)):
 
 with open("data_music.json", "w", encoding="utf-8") as file2:
     json.dump(music_data, file2)
+
+# Вывод:
+# В стране Spain топовыми артистами являются:
+# 1. David Bowie
+# 2. Radiohead
+# 3. Queen
+# 4. Coldplay
+# 5. The Rolling Stones
+# 6. Muse
+# 7. The Beatles
+# 8. The Cure
+# 9. Daft Punk
+# 10. Arctic Monkeys
+# 11. Red Hot Chili Peppers
+# 12. Blur
+# 13. Ed Sheeran
+# 14. Nirvana
+# 15. Sia
+# 16. Pink Floyd
+# 17. Bob Dylan
+# 18. Tame Impala
+# 19. The Strokes
+# 20. U2
+# 21. Adele
+# 22. Arcade Fire
+# 23. The Weeknd
+# 24. Calvin Harris
+# 25. R.E.M.
+# 26. Michael Jackson
+# 27. Depeche Mode
+# 28. Led Zeppelin
+# 29. Lana Del Rey
+# 30. The xx
+# 31. The Killers
+# 32. Major Lazer
+# 33. The Black Keys
+# 34. Foo Fighters
+# 35. Rihanna
+# 36. Oasis
+# 37. Imagine Dragons
+# 38. The Smiths
+# 39. The Clash
+# 40. Gorillaz
+# 41. Florence + the Machine
+# 42. Franz Ferdinand
+# 43. Pixies
+# 44. Beck
+# 45. David Guetta
+# 46. The White Stripes
+# 47. New Order
+# 48. Vetusta Morla
+# 49. Drake
+# 50. Metallica
+
+
