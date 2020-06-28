@@ -29,6 +29,7 @@ class LeroymerlinSpider(scrapy.Spider):
             p_name = p.xpath(".//dt[@class='def-list__term']/text()").extract_first()
             p_value = p.xpath(".//dd[@class='def-list__definition']/text()").extract_first()
             params[p_name] = p_value
+        # Можно loader.add_xpath('params', ".//dt[@class='def-list__term']/text()" | //dd[@class='def-list__definition']/text()") и потом их обработать в items dict(zip(2 среза этого списка с шагом 2 и разным стартовым))
         loader.add_value('params', params)
         yield loader.load_item()
         # photos = response.xpath("//picture[@slot='pictures']/source[@media=' only screen and (min-width: 1024px)']/@srcset").extract()
