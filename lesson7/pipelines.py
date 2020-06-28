@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 import scrapy
 from scrapy.pipelines.images import ImagesPipeline
 from pymongo import MongoClient
+import os
 
 
 class DatabasePipeline:
@@ -27,12 +28,14 @@ class LoadPhotosPipeline(ImagesPipeline):
         if item['photos']:
             for img in item['photos']:
                 try:
-                    yield scrapy.Request(img)  #meta=item
+                    yield scrapy.Request(img, meta=item)
                 except Exception as e:
                     print(e)
 
-    # def file_path(self, request, response=None, info=None):
-    #     return '/myfile/filename.jpg'
+    def file_path(self, request, response=None, info=None):
+        item = request.meta # получаем данные из мета
+        index = str(request)[-7:-5]
+        return f'{item["name"]}/{index}.jpg'
 
     def item_completed(self, results, item, info):
         if results:
