@@ -13,8 +13,8 @@ class InstagramSpider(scrapy.Spider):
     name = 'instagram'
     allowed_domains = ['instagram.com']
     start_urls = ['https://instagram.com/']
-    insta_login = 'sofi_slowfi'
-    insta_pwd = '#PWD_INSTAGRAM_BROWSER:9:1593449911:AVdQAMIf7WAuNENRe4H3FdUD5OTbZJSyk1DvPwdfzCXiEhNVI/lWJsFPeED4/J2fwod+LywNVG522+f4TC1kjM1TPQbTgXtf5jN/oGWdHk7sHv5InlkAqtqIPBHZDYqDXs0RO2zbmBzEIu1rtjjefvFYow=='
+    insta_login = '**'
+    insta_pwd = '**'
     inst_login_link = 'https://www.instagram.com/accounts/login/ajax/'
     parse_users = ['veshkisport', 'if.not.model'] #Пользователи, у которых собираем подписчиков
     graphql_url = 'https://www.instagram.com/graphql/query/?'
